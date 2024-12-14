@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Gestion d'Agence de Voyage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ce projet est une application web interactive pour la gestion des services d'une agence de voyage. Elle inclut des fonctionnalités pour la gestion des hôtels, la navigation entre les différents services proposés, et la recherche des hôtels avec des critères personnalisés.
 
-## Available Scripts
+## Fonctionnalités principales
 
-In the project directory, you can run:
+### 1. BackOffice - Gestion des Hôtels
+Le composant **BackOffice** permet d'ajouter, modifier et supprimer des hôtels dans la base de données.
 
-### `npm start`
+- **Ajout d'un hôtel** :
+  - Remplissez les champs (nom, étoiles, prix, description) et téléchargez une image.
+  - Cliquez sur le bouton "Ajouter" pour enregistrer l'hôtel.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Modification d'un hôtel** :
+  - Cliquez sur le bouton "Modifier" d'un hôtel existant pour charger ses informations dans le formulaire.
+  - Mettez à jour les champs nécessaires et cliquez sur "Modifier".
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Suppression d'un hôtel** :
+  - Cliquez sur "Supprimer" pour retirer un hôtel de la liste.
 
-### `npm test`
+- **Liste des hôtels** :
+  - Les hôtels ajoutés sont affichés avec leurs détails (nom, étoiles, prix, description, image).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 2. Page d'Accueil - Services
+Le composant **Home** présente les principaux services de l'agence de voyage à travers une interface attrayante et responsive.
 
-### `npm run build`
+- **Services offerts** :
+  - Réservation d'hôtels : Trouvez des hôtels adaptés à vos besoins.
+  - Forfaits vacances : Explorez des options de voyages tout compris.
+  - Hôtels populaires : Accédez à une sélection d'hôtels prisés.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Expérience utilisateur** :
+  - Mise en avant des services via des cartes animées.
+  - Interface claire et accueillante pour les visiteurs.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 3. Recherche et Filtrage des Hôtels
+Le composant **Hotels** permet de parcourir les hôtels disponibles, d'appliquer des filtres et de naviguer à travers les résultats.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Filtres personnalisés** :
+  - Filtrez les hôtels selon le prix maximum et le nombre minimum d'étoiles.
 
-### `npm run eject`
+- **Pagination** :
+  - Naviguez entre les pages de résultats avec une pagination simple et intuitive.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Liste des hôtels** :
+  - Les hôtels affichés répondent aux critères de recherche appliqués.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Message d'absence de résultat** :
+  - Un message s'affiche si aucun hôtel ne correspond aux filtres.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Technologies utilisées
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Frontend** : React.js avec Material-UI pour des composants modernes et stylés.
+- **Gestion des données** : Stockage des données d'hôtels simulées via un fichier de données.
+- **Structure des composants** :
+  - `Header` et `Footer` pour une navigation et une mise en page uniformisées.
+  - `HotelCard` pour afficher les informations détaillées des hôtels.
+  - `Filter` pour appliquer les critères de recherche.
 
-## Learn More
+## Instructions pour l'exécution
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Installation des dépendances** :
+   - Assurez-vous d'avoir Node.js installé.
+   - Exécutez la commande `npm install` pour installer les dépendances nécessaires.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Lancement de l'application** :
+   - Démarrez le serveur de développement avec la commande `npm start`.
+   - L'application sera accessible à l'adresse `http://localhost:3000/`.
 
-### Code Splitting
+3. **Personnalisation des données** :
+   - Les données initiales des hôtels sont stockées dans `../data/data.ts`.
+   - Modifiez ce fichier pour personnaliser les hôtels affichés par défaut.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Améliorations possibles
 
-### Analyzing the Bundle Size
+- **Intégration avec une API backend** : Remplacez le fichier de données statiques par une API REST ou GraphQL.
+- **Gestion des utilisateurs** : Ajoutez une authentification pour gérer les autorisations sur les fonctionnalités de BackOffice.
+- **Meilleure gestion des images** : Implémentez un stockage d'images sur un serveur distant ou un service cloud.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Auteurs
 
-### Making a Progressive Web App
+Ce projet a été conçu pour fournir une solution simple mais fonctionnelle à la gestion d'une agence de voyage. Si vous avez des questions ou des suggestions, n'hésitez pas à nous contacter.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
